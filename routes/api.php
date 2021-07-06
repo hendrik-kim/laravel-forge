@@ -27,9 +27,9 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::get('/posts/{id}', [PostController::class, 'show']);
 Route::get('/posts/search/{title}', [PostController::class, 'search']);
 
-Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::get('/posts', [PostController::class, 'index']);
-    Route::post('/posts', [PostController::class, 'store']);
-    Route::put('/posts/{id}', [PostController::class, 'update']);
-    Route::delete('/posts/{id}', [PostController::class, 'destroy']);
-});
+// Route::group(['middleware' => ['auth:sanctum']], function () {
+Route::get('/posts', [PostController::class, 'index']);
+Route::post('/posts', [PostController::class, 'store']);
+Route::put('/posts/{id}', [PostController::class, 'update']);
+Route::delete('/posts/{id}', [PostController::class, 'destroy']);
+// });
