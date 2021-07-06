@@ -30,11 +30,11 @@
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                drawer: true
-            }
-        },
+export default {
+    data() {
+        return {
+            drawer: false
+        };
     }
+};
 </script>
